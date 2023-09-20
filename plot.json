@@ -1,0 +1,545 @@
+[
+  {
+    "name": "Terminal",
+    "props": {
+      "type": {
+        "type": "union",
+        "value": [
+          "in",
+          "out"
+        ],
+        "optional": false,
+        "repeated": false
+      },
+      "title": {
+        "type": "common",
+        "value": "String",
+        "optional": false,
+        "repeated": false
+      },
+      "state": {
+        "type": "union",
+        "value": [
+          "open",
+          "closed"
+        ],
+        "optional": false,
+        "repeated": false
+      },
+      "reversible": {
+        "type": "common",
+        "value": "Boolean",
+        "optional": true,
+        "repeated": false
+      },
+      "streamUris": {
+        "type": "common",
+        "value": "String",
+        "optional": false,
+        "repeated": true
+      }
+    }
+  },
+  {
+    "name": "SessionEntry",
+    "props": {
+      "at": {
+        "type": "common",
+        "value": "Date",
+        "optional": false,
+        "repeated": false
+      },
+      "terminal": {
+        "type": "common",
+        "value": "ObjectId",
+        "optional": false,
+        "ref": "Terminal",
+        "repeated": false
+      },
+      "media": {
+        "type": "common",
+        "value": "String",
+        "optional": false,
+        "repeated": false
+      }
+    }
+  },
+  {
+    "name": "Session",
+    "props": {
+      "entry": {
+        "type": "embedded",
+        "value": {
+          "at": {
+            "type": "common",
+            "value": "Date",
+            "optional": false,
+            "repeated": false
+          },
+          "terminal": {
+            "type": "common",
+            "value": "ObjectId",
+            "optional": false,
+            "ref": "Terminal",
+            "repeated": false
+          },
+          "media": {
+            "type": "common",
+            "value": "String",
+            "optional": false,
+            "repeated": false
+          }
+        },
+        "optional": true,
+        "repeated": false
+      },
+      "exit": {
+        "type": "embedded",
+        "value": {
+          "at": {
+            "type": "common",
+            "value": "Date",
+            "optional": false,
+            "repeated": false
+          },
+          "terminal": {
+            "type": "common",
+            "value": "ObjectId",
+            "optional": false,
+            "ref": "Terminal",
+            "repeated": false
+          },
+          "media": {
+            "type": "common",
+            "value": "String",
+            "optional": false,
+            "repeated": false
+          }
+        },
+        "optional": true,
+        "repeated": false
+      },
+      "vehicle": {
+        "type": "embedded",
+        "value": {
+          "vrm": {
+            "type": "common",
+            "value": "String",
+            "optional": false,
+            "repeated": false
+          },
+          "type": {
+            "type": "union",
+            "value": [
+              "auto",
+              "bus",
+              "truck",
+              "light-truck"
+            ],
+            "optional": false,
+            "repeated": false
+          },
+          "description": {
+            "type": "common",
+            "value": "String",
+            "optional": true,
+            "repeated": false
+          }
+        },
+        "optional": false,
+        "repeated": false
+      },
+      "passType": {
+        "type": "union",
+        "value": [
+          "subscription",
+          "onetime",
+          "onetime-guest",
+          "multiuse-guest"
+        ],
+        "optional": false,
+        "repeated": false
+      },
+      "status": {
+        "type": "union",
+        "value": [
+          "idle",
+          "cancelled",
+          "active",
+          "ended"
+        ],
+        "optional": false,
+        "repeated": false
+      },
+      "pass": {
+        "type": "common",
+        "value": "ObjectId",
+        "optional": false,
+        "ref": "Pass",
+        "repeated": false
+      },
+      "customer": {
+        "type": "common",
+        "value": "ObjectId",
+        "optional": false,
+        "ref": "Customer",
+        "repeated": false
+      },
+      "billings": {
+        "type": "common",
+        "value": "ObjectId",
+        "optional": false,
+        "ref": "Billing",
+        "repeated": true
+      },
+      "zone": {
+        "type": "common",
+        "value": "ObjectId",
+        "optional": false,
+        "ref": "Zone",
+        "repeated": false
+      },
+      "parking": {
+        "type": "common",
+        "value": "ObjectId",
+        "optional": false,
+        "ref": "Parking",
+        "repeated": false
+      }
+    }
+  },
+  {
+    "name": "ParkingProperties",
+    "props": {
+      "state": {
+        "type": "union",
+        "value": [
+          "normal",
+          "free",
+          "all-open",
+          "all-closed",
+          "emergency"
+        ],
+        "optional": false,
+        "repeated": false
+      }
+    }
+  },
+  {
+    "name": "Parking",
+    "props": {
+      "title": {
+        "type": "common",
+        "value": "String",
+        "optional": false,
+        "repeated": false
+      },
+      "properties": {
+        "type": "embedded",
+        "value": {
+          "state": {
+            "type": "union",
+            "value": [
+              "normal",
+              "free",
+              "all-open",
+              "all-closed",
+              "emergency"
+            ],
+            "optional": false,
+            "repeated": false
+          }
+        },
+        "optional": false,
+        "repeated": false
+      },
+      "zones": {
+        "type": "common",
+        "value": "ObjectId",
+        "optional": false,
+        "ref": "Zone",
+        "repeated": true
+      }
+    }
+  },
+  {
+    "name": "CustomerInfo",
+    "props": {
+      "name": {
+        "type": "common",
+        "value": "String",
+        "optional": false,
+        "repeated": false
+      },
+      "note": {
+        "type": "common",
+        "value": "String",
+        "optional": false,
+        "repeated": false
+      },
+      "email": {
+        "type": "common",
+        "value": "String",
+        "optional": true,
+        "repeated": false
+      },
+      "phone": {
+        "type": "common",
+        "value": "String",
+        "optional": true,
+        "repeated": false
+      },
+      "tin": {
+        "type": "common",
+        "value": "String",
+        "optional": true,
+        "repeated": false
+      }
+    }
+  },
+  {
+    "name": "Customer",
+    "props": {
+      "info": {
+        "type": "common",
+        "value": {},
+        "optional": false,
+        "repeated": false
+      },
+      "legal": {
+        "type": "common",
+        "value": "Boolean",
+        "optional": false,
+        "repeated": false
+      },
+      "passes": {
+        "type": "common",
+        "value": "ObjectId",
+        "optional": false,
+        "ref": "Pass",
+        "repeated": true
+      },
+      "activeSessions": {
+        "type": "common",
+        "value": "ObjectId",
+        "optional": false,
+        "ref": "Session",
+        "repeated": true
+      }
+    }
+  },
+  {
+    "name": "Billing",
+    "props": {
+      "type": {
+        "type": "union",
+        "value": [
+          "cash",
+          "cashless"
+        ],
+        "optional": false,
+        "repeated": false
+      },
+      "deposit": {
+        "type": "common",
+        "value": "Number",
+        "optional": false,
+        "repeated": false
+      },
+      "time": {
+        "type": "common",
+        "value": "Date",
+        "optional": false,
+        "repeated": false
+      },
+      "source": {
+        "type": "union",
+        "value": [
+          "pass",
+          "session"
+        ],
+        "optional": false,
+        "repeated": false
+      },
+      "pass": {
+        "type": "common",
+        "value": "ObjectId",
+        "optional": true,
+        "ref": "Pass",
+        "repeated": false
+      },
+      "error": {
+        "type": "common",
+        "value": "Number",
+        "optional": true,
+        "repeated": false
+      }
+    }
+  },
+  {
+    "name": "Zone",
+    "props": {
+      "title": {
+        "type": "common",
+        "value": "String",
+        "optional": false,
+        "repeated": false
+      },
+      "spaces": {
+        "type": "common",
+        "value": "Number",
+        "optional": false,
+        "repeated": false
+      },
+      "terminals": {
+        "type": "common",
+        "value": "ObjectId",
+        "optional": false,
+        "ref": "Terminal",
+        "repeated": true
+      }
+    }
+  },
+  {
+    "name": "MultiuseStats",
+    "props": {
+      "total": {
+        "type": "common",
+        "value": "Number",
+        "optional": false,
+        "repeated": false
+      },
+      "used": {
+        "type": "common",
+        "value": "Number",
+        "optional": false,
+        "repeated": false
+      }
+    }
+  },
+  {
+    "name": "Pass",
+    "props": {
+      "type": {
+        "type": "union",
+        "value": [
+          {
+            "Subscription": "subscription",
+            "Onetime": "onetime",
+            "OnetimeGuest": "onetime-guest",
+            "MultiUseGuest": "multiuse-guest"
+          }
+        ],
+        "optional": false,
+        "repeated": false
+      },
+      "createdAt": {
+        "type": "common",
+        "value": "Date",
+        "optional": false,
+        "repeated": false
+      },
+      "start": {
+        "type": "common",
+        "value": "Date",
+        "optional": true,
+        "repeated": false
+      },
+      "until": {
+        "type": "common",
+        "value": "Date",
+        "optional": true,
+        "repeated": false
+      },
+      "billings": {
+        "type": "common",
+        "value": "ObjectId",
+        "optional": false,
+        "repeated": true
+      },
+      "suspended": {
+        "type": "common",
+        "value": "Boolean",
+        "optional": true,
+        "repeated": false
+      },
+      "multiuse": {
+        "type": "embedded",
+        "value": {
+          "total": {
+            "type": "common",
+            "value": "Number",
+            "optional": false,
+            "repeated": false
+          },
+          "used": {
+            "type": "common",
+            "value": "Number",
+            "optional": false,
+            "repeated": false
+          }
+        },
+        "optional": true,
+        "repeated": false
+      },
+      "vehicles": {
+        "type": "embedded",
+        "value": {
+          "vrm": {
+            "type": "common",
+            "value": "String",
+            "optional": false,
+            "repeated": false
+          },
+          "type": {
+            "type": "union",
+            "value": [
+              "auto",
+              "bus",
+              "truck",
+              "light-truck"
+            ],
+            "optional": false,
+            "repeated": false
+          },
+          "description": {
+            "type": "common",
+            "value": "String",
+            "optional": true,
+            "repeated": false
+          }
+        },
+        "optional": false,
+        "repeated": true
+      }
+    }
+  },
+  {
+    "name": "Vehicle",
+    "props": {
+      "vrm": {
+        "type": "common",
+        "value": "String",
+        "optional": false,
+        "repeated": false
+      },
+      "type": {
+        "type": "union",
+        "value": [
+          "auto",
+          "bus",
+          "truck",
+          "light-truck"
+        ],
+        "optional": false,
+        "repeated": false
+      },
+      "description": {
+        "type": "common",
+        "value": "String",
+        "optional": true,
+        "repeated": false
+      }
+    }
+  }
+]

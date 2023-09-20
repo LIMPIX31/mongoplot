@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM"],
+    "module": "esnext",
+    "target": "esnext",
+    "moduleResolution": "NodeNext",
+    "moduleDetection": "force",
+	  "experimentalDecorators": true,
+	  "emitDecoratorMetadata": true,
+	  "allowImportingTsExtensions": false,
+    "noEmit": true,
+    "composite": true,
+    "strict": true,
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+    "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+	  "baseUrl": "./",
+	  "types": [
+		  "vite/client"
+	  ]
+  },
+	"references": [
+		{
+			"path": "./flow/tsconfig.json"
+		}
+	]
+}

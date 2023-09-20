@@ -1,0 +1,38 @@
+{
+  "name": "mongoplot",
+  "main": "src/index.ts",
+  "version": "0.0.1",
+  "type": "module",
+  "bin": "./dist/bin/mongoplot.js",
+  "scripts": {
+    "build": "yarn lib build"
+  },
+  "devDependencies": {
+    "@nestjs/core": "^10.2.5",
+    "@nestjs/mongoose": "^10.0.1",
+    "@types/node": "^20.6.3",
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
+    "mongoose": "^7.5.2"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.2.5",
+    "@nestjs/swagger": "^7.1.11",
+    "@vitejs/plugin-react": "^4.0.4",
+    "clipanion": "^4.0.0-rc.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "reactflow": "^11.8.3",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.1",
+    "vite": "^4.4.9"
+  },
+  "peerDependencies": {
+    "@nestjs/core": "^10",
+    "@nestjs/mongoose": "^10",
+    "mongoose": "^7",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "packageManager": "yarn@3.6.3"
+}

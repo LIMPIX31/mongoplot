@@ -1,0 +1,19 @@
+{
+  "name": "@mongoplot/monorepo",
+  "module": "src/index.ts",
+  "type": "module",
+  "workspaces": [
+    "transform",
+    "flow"
+  ],
+  "devDependencies": {
+    "@lmpx-config/eslint": "^0.0.17",
+    "@lmpx-config/prettier": "^0.0.2",
+    "@types/node": "^20.6.3",
+    "eslint": "^8.49.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9"
+  },
+  "packageManager": "yarn@3.6.3"
+}
