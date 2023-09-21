@@ -1,7 +1,9 @@
 import { DynamicModule }       from '@nestjs/common'
 import { Module }              from '@nestjs/common'
 import { TypeMetadataStorage } from '@nestjs/mongoose/dist/storages/type-metadata.storage.js'
+import { RedirectOptions }     from 'transform/src/nestjs/types.js'
 
+import { PLOT_REDIRECT }       from './constants.js'
 import { PLOT_TARGETS }        from './constants.js'
 import { MongoplotController } from './mongoplot.controller.js'
 
@@ -11,7 +13,7 @@ function filterSchemas(value: any) {
 
 @Module({})
 export class MongoplotModule {
-	static register(mod: Array<any> | Record<string, any>): DynamicModule {
+	static register(mod: Array<any> | Record<string, any>, redirectOptions: RedirectOptions = {}): DynamicModule {
 		return {
 			module: MongoplotModule,
 			providers: [
@@ -27,6 +29,18 @@ export class MongoplotModule {
 						}
 
 						throw new Error('Failed to register mongoplot targets')
+					})(),
+				},
+				{
+					provide: PLOT_REDIRECT,
+					useValue: (() => {
+						const publicUrl = redirectOptions?.publicUrl ?? process.env.PUBLIC_URL ?? 'https://localhost:8000/'
+						const printUrl = redirectOptions.printUrl ?? new URL('mongoplot/print', publicUrl)
+
+						return new URL(
+							encodeURIComponent(printUrl.toString()),
+							redirectOptions.mongoplotUrl ?? 'https://mongoplot.vercel.app/',
+						)
 					})(),
 				},
 			],

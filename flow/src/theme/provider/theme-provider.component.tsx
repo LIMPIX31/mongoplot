@@ -8,7 +8,7 @@ import      { baseTheme }         from 'theme/schema/index.js'
 
 export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => (
   <CssVarsProvider
-    defaultMode='dark'
+    defaultMode='light'
     disableNestedContext
     colorSchemeSelector='#root'
     modeStorageKey='dark-mode'

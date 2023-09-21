@@ -1291,6 +1291,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/body-parser@npm:*":
+  version: 1.19.3
+  resolution: "@types/body-parser@npm:1.19.3"
+  dependencies:
+    "@types/connect": "npm:*"
+    "@types/node": "npm:*"
+  checksum: d35f76406232ee68b02b4b37b4b63cce26329f4302f55c19d5f4fd346f5b7df0994af486331849c4992567d83ded10f5beb3e200280c2142f53e0424f1565082
+  languageName: node
+  linkType: hard
+
+"@types/connect@npm:*":
+  version: 3.4.36
+  resolution: "@types/connect@npm:3.4.36"
+  dependencies:
+    "@types/node": "npm:*"
+  checksum: 0dd8fcf576e178e69cbc00d47be69d3198dca4d86734a00fc55de0df147982e0a5f34592117571c5979e92ce8f3e0596e31aa454496db8a43ab90c5ab1068f40
+  languageName: node
+  linkType: hard
+
 "@types/d3-array@npm:*":
   version: 3.0.7
   resolution: "@types/d3-array@npm:3.0.7"
@@ -1563,10 +1582,41 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/express-serve-static-core@npm:^4.17.33":
+  version: 4.17.36
+  resolution: "@types/express-serve-static-core@npm:4.17.36"
+  dependencies:
+    "@types/node": "npm:*"
+    "@types/qs": "npm:*"
+    "@types/range-parser": "npm:*"
+    "@types/send": "npm:*"
+  checksum: ab0730272ed83528d0c7a040bc53c033720be5836c7059ffa8290ad13e6a57f5903aa14c2556f3235c9fa2ea167c477f00c43ae8e4a8712d05461dd6b9e69cde
+  languageName: node
+  linkType: hard
+
+"@types/express@npm:^4.17.17":
+  version: 4.17.17
+  resolution: "@types/express@npm:4.17.17"
+  dependencies:
+    "@types/body-parser": "npm:*"
+    "@types/express-serve-static-core": "npm:^4.17.33"
+    "@types/qs": "npm:*"
+    "@types/serve-static": "npm:*"
+  checksum: 5802a0a28f7473744dd6a118479440d8c5c801c973d34fb6f31b5ee645a41fee936193978a8e905d55deefda9b675d19924167bf11a31339874c3161a3fc2922
+  languageName: node
+  linkType: hard
+
 "@types/geojson@npm:*":
   version: 7946.0.10
   resolution: "@types/geojson@npm:7946.0.10"
   checksum: 4abba554467494c1496a60622c2cb6f8c7f80b0dbb909ff898812a9f67799fd1b254802d7d266361974bd8b0c9ef32a7686183aac83b20c437f6d0eee89cd0a1
+  languageName: node
+  linkType: hard
+
+"@types/http-errors@npm:*":
+  version: 2.0.2
+  resolution: "@types/http-errors@npm:2.0.2"
+  checksum: ecedc65091baf7c83e0e61e7d1992112e0fa09461d69004747f55c80b801b796bdb60161e54efdac8a720b5f78a54720b0cabde3ae7094103a552d5c189222ce
   languageName: node
   linkType: hard
 
@@ -1581,6 +1631,20 @@ __metadata:
   version: 0.0.29
   resolution: "@types/json5@npm:0.0.29"
   checksum: 6bf5337bc447b706bb5b4431d37686aa2ea6d07cfd6f79cc31de80170d6ff9b1c7384a9c0ccbc45b3f512bae9e9f75c2e12109806a15331dc94e8a8db6dbb4ac
+  languageName: node
+  linkType: hard
+
+"@types/mime@npm:*":
+  version: 3.0.1
+  resolution: "@types/mime@npm:3.0.1"
+  checksum: c4c0fc89042822a3b5ffd6ef0da7006513454ee8376ffa492372d17d2925a4e4b1b194c977b718c711df38b33eb9d06deb5dbf9f851bcfb7e5e65f06b2a87f97
+  languageName: node
+  linkType: hard
+
+"@types/mime@npm:^1":
+  version: 1.3.2
+  resolution: "@types/mime@npm:1.3.2"
+  checksum: 61d144e5170c6cdf6de334ec0ee4bb499b1a0fb0233834a9e8cec6d289b0e3042bedf35cbc1c995d71a247635770dae3f13a9ddae69098bb54b933429bc08d35
   languageName: node
   linkType: hard
 
@@ -1602,6 +1666,20 @@ __metadata:
   version: 15.7.6
   resolution: "@types/prop-types@npm:15.7.6"
   checksum: 2871c61f662b91c7366204ae6801bc0a88e1e7e8d48962f7f2143cf0f0f4dbbe9a57978063729d15ffd7fad13bd648cc70ff019b7a3fc8f4b84f72fb259b4dfb
+  languageName: node
+  linkType: hard
+
+"@types/qs@npm:*":
+  version: 6.9.8
+  resolution: "@types/qs@npm:6.9.8"
+  checksum: 336358c279818ecedc0b4f9b29fd5052ff6e05dba3f10bad4534a4624819408d0b4710a4cdf8b58dff948dbdb1ca95a00e237189505ef1abfce0e6341eb18022
+  languageName: node
+  linkType: hard
+
+"@types/range-parser@npm:*":
+  version: 1.2.4
+  resolution: "@types/range-parser@npm:1.2.4"
+  checksum: 8e3c3cda88675efd9145241bcb454449715b7d015a7fb80d018dcb3d441fa1938b302242cc0dfa6b02c5d014dd8bc082ae90091e62b1e816cae3ec36c2a7dbcb
   languageName: node
   linkType: hard
 
@@ -1636,6 +1714,27 @@ __metadata:
   version: 7.5.2
   resolution: "@types/semver@npm:7.5.2"
   checksum: 0d815fc82e43a3c54075bbb3ffc0a2b5b77f62ec22832c43354d58f480128e41206432446316578c6d3574a4dec10ec99e698ad77829c57a7b9936d248cf5b31
+  languageName: node
+  linkType: hard
+
+"@types/send@npm:*":
+  version: 0.17.1
+  resolution: "@types/send@npm:0.17.1"
+  dependencies:
+    "@types/mime": "npm:^1"
+    "@types/node": "npm:*"
+  checksum: 1aad6bfafdaa3a3cadad1b441843dfd166821c0e93513daabe979de85b552a1298cfb6f07d40f80b5ecf14a3194dc148deb138605039841f1dadc7132c73e634
+  languageName: node
+  linkType: hard
+
+"@types/serve-static@npm:*":
+  version: 1.15.2
+  resolution: "@types/serve-static@npm:1.15.2"
+  dependencies:
+    "@types/http-errors": "npm:*"
+    "@types/mime": "npm:*"
+    "@types/node": "npm:*"
+  checksum: 5e7b3e17b376f8910d5c9a0b1def38d7841c8939713940098f1b80a330d5caa9cfe9b632c122252cd70165052439e18fafa46635dc55b1d6058343901eec22eb
   languageName: node
   linkType: hard
 
@@ -4527,6 +4626,7 @@ __metadata:
     "@nestjs/core": "npm:^10.2.5"
     "@nestjs/mongoose": "npm:^10.0.1"
     "@nestjs/swagger": "npm:^7.1.11"
+    "@types/express": "npm:^4.17.17"
     "@types/node": "npm:^20.6.3"
     "@types/react": "npm:^18.2.22"
     "@types/react-dom": "npm:^18.2.7"

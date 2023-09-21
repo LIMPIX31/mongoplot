@@ -1876,6 +1876,27 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/body-parser", [\
+      ["npm:1.19.3", {\
+        "packageLocation": "./.yarn/cache/@types-body-parser-npm-1.19.3-2449988991-d35f764062.zip/node_modules/@types/body-parser/",\
+        "packageDependencies": [\
+          ["@types/body-parser", "npm:1.19.3"],\
+          ["@types/connect", "npm:3.4.36"],\
+          ["@types/node", "npm:20.6.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/connect", [\
+      ["npm:3.4.36", {\
+        "packageLocation": "./.yarn/cache/@types-connect-npm-3.4.36-0d8f297d57-0dd8fcf576.zip/node_modules/@types/connect/",\
+        "packageDependencies": [\
+          ["@types/connect", "npm:3.4.36"],\
+          ["@types/node", "npm:20.6.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/d3", [\
       ["npm:7.4.0", {\
         "packageLocation": "./.yarn/cache/@types-d3-npm-7.4.0-7025c582e3-f382cb3c78.zip/node_modules/@types/d3/",\
@@ -2198,11 +2219,46 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/express", [\
+      ["npm:4.17.17", {\
+        "packageLocation": "./.yarn/cache/@types-express-npm-4.17.17-46fe8173db-5802a0a28f.zip/node_modules/@types/express/",\
+        "packageDependencies": [\
+          ["@types/express", "npm:4.17.17"],\
+          ["@types/body-parser", "npm:1.19.3"],\
+          ["@types/express-serve-static-core", "npm:4.17.36"],\
+          ["@types/qs", "npm:6.9.8"],\
+          ["@types/serve-static", "npm:1.15.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/express-serve-static-core", [\
+      ["npm:4.17.36", {\
+        "packageLocation": "./.yarn/cache/@types-express-serve-static-core-npm-4.17.36-87a82f5a6b-ab0730272e.zip/node_modules/@types/express-serve-static-core/",\
+        "packageDependencies": [\
+          ["@types/express-serve-static-core", "npm:4.17.36"],\
+          ["@types/node", "npm:20.6.3"],\
+          ["@types/qs", "npm:6.9.8"],\
+          ["@types/range-parser", "npm:1.2.4"],\
+          ["@types/send", "npm:0.17.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/geojson", [\
       ["npm:7946.0.10", {\
         "packageLocation": "./.yarn/cache/@types-geojson-npm-7946.0.10-deca8d1263-4abba55446.zip/node_modules/@types/geojson/",\
         "packageDependencies": [\
           ["@types/geojson", "npm:7946.0.10"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/http-errors", [\
+      ["npm:2.0.2", {\
+        "packageLocation": "./.yarn/cache/@types-http-errors-npm-2.0.2-925b748dbd-ecedc65091.zip/node_modules/@types/http-errors/",\
+        "packageDependencies": [\
+          ["@types/http-errors", "npm:2.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2221,6 +2277,22 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-json5-npm-0.0.29-f63a7916bd-6bf5337bc4.zip/node_modules/@types/json5/",\
         "packageDependencies": [\
           ["@types/json5", "npm:0.0.29"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/mime", [\
+      ["npm:1.3.2", {\
+        "packageLocation": "./.yarn/cache/@types-mime-npm-1.3.2-ea71878ab3-61d144e517.zip/node_modules/@types/mime/",\
+        "packageDependencies": [\
+          ["@types/mime", "npm:1.3.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:3.0.1", {\
+        "packageLocation": "./.yarn/cache/@types-mime-npm-3.0.1-dec03536dc-c4c0fc8904.zip/node_modules/@types/mime/",\
+        "packageDependencies": [\
+          ["@types/mime", "npm:3.0.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2248,6 +2320,24 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-prop-types-npm-15.7.6-9468562b65-2871c61f66.zip/node_modules/@types/prop-types/",\
         "packageDependencies": [\
           ["@types/prop-types", "npm:15.7.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/qs", [\
+      ["npm:6.9.8", {\
+        "packageLocation": "./.yarn/cache/@types-qs-npm-6.9.8-34e5143bd2-336358c279.zip/node_modules/@types/qs/",\
+        "packageDependencies": [\
+          ["@types/qs", "npm:6.9.8"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/range-parser", [\
+      ["npm:1.2.4", {\
+        "packageLocation": "./.yarn/cache/@types-range-parser-npm-1.2.4-23d797fbde-8e3c3cda88.zip/node_modules/@types/range-parser/",\
+        "packageDependencies": [\
+          ["@types/range-parser", "npm:1.2.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2288,6 +2378,29 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-semver-npm-7.5.2-7f1fca5852-0d815fc82e.zip/node_modules/@types/semver/",\
         "packageDependencies": [\
           ["@types/semver", "npm:7.5.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/send", [\
+      ["npm:0.17.1", {\
+        "packageLocation": "./.yarn/cache/@types-send-npm-0.17.1-5f715ca966-1aad6bfafd.zip/node_modules/@types/send/",\
+        "packageDependencies": [\
+          ["@types/send", "npm:0.17.1"],\
+          ["@types/mime", "npm:1.3.2"],\
+          ["@types/node", "npm:20.6.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/serve-static", [\
+      ["npm:1.15.2", {\
+        "packageLocation": "./.yarn/cache/@types-serve-static-npm-1.15.2-fc398c0cea-5e7b3e17b3.zip/node_modules/@types/serve-static/",\
+        "packageDependencies": [\
+          ["@types/serve-static", "npm:1.15.2"],\
+          ["@types/http-errors", "npm:2.0.2"],\
+          ["@types/mime", "npm:3.0.1"],\
+          ["@types/node", "npm:20.6.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -5721,6 +5834,7 @@ const RAW_RUNTIME_STATE =
           ["@nestjs/core", "virtual:6d9b51f3c19a3a1786988e8cbd7c5416ce9453e25d4911de1bf2d624c4d1441451e1016e34eabedb4958ad8c4a3b0e4f7938804d862c8525a570fb1acfbea20b#npm:10.2.5"],\
           ["@nestjs/mongoose", "virtual:6d9b51f3c19a3a1786988e8cbd7c5416ce9453e25d4911de1bf2d624c4d1441451e1016e34eabedb4958ad8c4a3b0e4f7938804d862c8525a570fb1acfbea20b#npm:10.0.1"],\
           ["@nestjs/swagger", "virtual:6d9b51f3c19a3a1786988e8cbd7c5416ce9453e25d4911de1bf2d624c4d1441451e1016e34eabedb4958ad8c4a3b0e4f7938804d862c8525a570fb1acfbea20b#npm:7.1.11"],\
+          ["@types/express", "npm:4.17.17"],\
           ["@types/node", "npm:20.6.3"],\
           ["@types/react", "npm:18.2.22"],\
           ["@types/react-dom", "npm:18.2.7"],\
