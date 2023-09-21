@@ -34,7 +34,7 @@ export class MongoplotModule {
 				{
 					provide: PLOT_REDIRECT,
 					useValue: (() => {
-						const publicUrl = redirectOptions?.publicUrl ?? process.env.PUBLIC_URL ?? 'https://localhost:8000/'
+						const publicUrl = redirectOptions?.publicUrl ?? process.env.PUBLIC_URL ?? 'http://localhost:8000/'
 						const printUrl = redirectOptions.printUrl ?? new URL('mongoplot/print', publicUrl)
 
 						return new URL(
