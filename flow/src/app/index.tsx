@@ -1,6 +1,8 @@
 import { FC }         from 'react'
 import { useMemo }    from 'react'
 
+import { styled }     from '@mui/joy'
+import { useTheme }   from '@mui/joy'
 import { useQuery }   from '@tanstack/react-query'
 import { useParams }  from 'react-router-dom'
 import { Background } from 'reactflow'
@@ -15,7 +17,48 @@ const nodeTypes = {
   shema: SchemaNode,
 }
 
+const ReactFlowStyled = styled(ReactFlow)(({ theme }) => ({
+  '.react-flow__edge-path': {
+    stroke: theme.vars.palette.neutral.solidBg,
+  },
+
+  '.react-flow__edge-textbg': {
+    fill: theme.vars.palette.background.surface,
+  },
+
+  '.react-flow__edge-text': {
+    fill: theme.vars.palette.text.primary,
+  },
+}))
+
+const MiniMapStyled = styled(MiniMap)(({ theme }) => ({
+  backgroundColor: theme.vars.palette.background.surface,
+
+  '.react-flow__minimap-mask': {
+    fill: theme.vars.palette.background.level1,
+    opacity: 0.9,
+  },
+}))
+
+const ControlsStyled = styled(Controls)(({ theme }) => ({
+  borderRadius: '6px',
+
+  button: {
+    backgroundColor: theme.vars.palette.background.level2,
+    borderBottom: 0,
+
+    '&:hover': {
+      backgroundColor: theme.vars.palette.background.level3,
+    },
+
+    path: {
+      fill: theme.vars.palette.text.primary,
+    },
+  },
+}))
+
 export const App: FC = () => {
+  const theme = useTheme()
   const { uri } = useParams()
 
   const { data, status } = useQuery({
@@ -31,7 +74,8 @@ export const App: FC = () => {
         id: model.name,
         type: 'shema',
         data: model,
-        position: { x: Math.floor(idx % square!) * 700, y: Math.floor(idx / square!) * 500 },
+        dragHandle: '.drag-handle',
+        position: model.position ?? { x: Math.floor(idx % square!) * 700, y: Math.floor(idx / square!) * 500 },
       })),
     [data, square],
   )
@@ -43,16 +87,16 @@ export const App: FC = () => {
   }
 
   return (
-    <ReactFlow defaultNodes={nodes} defaultEdges={edges} fitView snapToGrid snapGrid={[16, 16]} nodeTypes={nodeTypes}>
-      <MiniMap
+    <ReactFlowStyled defaultNodes={nodes} defaultEdges={edges} fitView nodeTypes={nodeTypes}>
+      <MiniMapStyled
         style={{
           height: 120,
         }}
         zoomable
         pannable
       />
-      <Controls />
-      <Background color='#aaa' gap={16} />
-    </ReactFlow>
+      <ControlsStyled />
+      <Background color={theme.vars.palette.neutral.outlinedBorder} gap={16} />
+    </ReactFlowStyled>
   )
 }

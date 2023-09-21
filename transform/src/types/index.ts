@@ -18,4 +18,5 @@ export type Prop = CommonPropType | UnionPropType | EmbeddedPropType | UnknownPr
 export interface Model {
 	name: string
 	props: Properties
+	position?: { x: number; y: number }
 }

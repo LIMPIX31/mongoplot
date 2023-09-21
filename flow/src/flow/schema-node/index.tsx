@@ -16,7 +16,7 @@ export const SchemaNode: FC<any> = ({ id, data }) => {
       sx={({ vars }) => ({
         position: 'relative',
         borderRadius: '6px',
-        border: `1px solid ${vars.palette.neutral[100]}`,
+        border: `1px solid ${vars.palette.neutral.outlinedBorder}`,
         background: vars.palette.background.surface,
       })}
     >
@@ -35,10 +35,11 @@ export const SchemaNode: FC<any> = ({ id, data }) => {
           }}
         />
         <Typography
+          className='drag-handle'
           sx={({ vars }) => ({
             padding: '8px 16px',
             fontSize: '1.25rem',
-            borderBottom: `1px solid ${vars.palette.neutral[100]}`,
+            borderBottom: `1px solid ${vars.palette.neutral.outlinedBorder}`,
           })}
         >
           {data.name}

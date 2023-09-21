@@ -7,7 +7,13 @@ import      { GlobalStyles }      from 'theme/global/index.js'
 import      { baseTheme }         from 'theme/schema/index.js'
 
 export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => (
-  <CssVarsProvider theme={baseTheme}>
+  <CssVarsProvider
+    defaultMode='dark'
+    disableNestedContext
+    colorSchemeSelector='#root'
+    modeStorageKey='dark-mode'
+    theme={baseTheme}
+  >
     <GlobalStyles />
     <FontStyles />
     {children}
