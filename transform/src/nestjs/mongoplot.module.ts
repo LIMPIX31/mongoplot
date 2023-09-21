@@ -1,11 +1,11 @@
 import { DynamicModule }       from '@nestjs/common'
 import { Module }              from '@nestjs/common'
 import { TypeMetadataStorage } from '@nestjs/mongoose/dist/storages/type-metadata.storage.js'
-import { RedirectOptions }     from 'transform/src/nestjs/types.js'
 
 import { PLOT_REDIRECT }       from './constants.js'
 import { PLOT_TARGETS }        from './constants.js'
 import { MongoplotController } from './mongoplot.controller.js'
+import { RedirectOptions }     from './types.js'
 
 function filterSchemas(value: any) {
 	return Boolean(TypeMetadataStorage.getSchemaMetadataByTarget(value))
