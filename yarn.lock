@@ -4645,8 +4645,6 @@ __metadata:
     mongoose: ^7
     react: ^18
     react-dom: ^18
-  bin:
-    mongoplot: ./dist/bin/mongoplot.js
   languageName: unknown
   linkType: soft
 

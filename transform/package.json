@@ -3,13 +3,13 @@
   "main": "src/index.ts",
   "version": "0.0.1",
   "type": "module",
-	"files": [
-		"dist"
-	],
-	"scripts": {
+  "files": [
+    "dist"
+  ],
+  "scripts": {
     "build": "yarn lib build",
-		"prepack": "yarn run build",
-		"postpack": "rm -rf dist"
+    "prepack": "yarn run build",
+    "postpack": "rm -rf dist"
   },
   "devDependencies": {
     "@nestjs/core": "^10.2.5",
@@ -39,9 +39,9 @@
     "react": "^18",
     "react-dom": "^18"
   },
-	"publishConfig": {
-		"main": "dist/index.js",
-		"typings": "dist/index.d.ts"
-	},
+  "publishConfig": {
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  },
   "packageManager": "yarn@3.6.3"
 }
